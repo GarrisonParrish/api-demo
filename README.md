@@ -16,9 +16,9 @@ Here is a [simple guide](https://www.w3schools.com/python/python_json.asp) to us
 
 [NASA API browser](https://api.nasa.gov/)
 
-Let's try a slightly more complex: NASA's Astronomy Picture of the Day API. All the information for today's APOD is available on their [website](https://apod.nasa.gov/apod/astropix.html), but let's try using the API to get the data in a form we can use! You can also access older APOD data using the `start_date` and `end_date` endpoints.
+Let's try a slightly more complex: NASA's Astronomy Picture of the Day (APOD) API. All the information for today's APOD is available on their [website](https://apod.nasa.gov/apod/astropix.html), but let's try using the API to get the data in a form we can use! You can also access older APOD data using the `start_date` and `end_date` endpoints.
 
-You will need to sign up for an account with NASA's API service. Once you have made an account, you will get a unique API key, which is used as authorization when you call any of NASA's public APIs. When you call an API, just add `"?api-key=YOUR_API_KEY_HERE"` to the URL.
+You will need to sign up for an account with NASA's API service. Once you have made an account, you will get a unique API key, which is used as authorization when you call any of NASA's public APIs. When you call an API, just add `"?api-key=YOUR_API_KEY_HERE"` to the end of the URL.
 
 Since we used the `requests.get` function to retrieve this data from the API, it is in a special object of a class called `Response`, which is something the `requests` library uses to package retrieved data. To get this data in a JSON object, we will call `OBJECT_NAME.json()` function (OBJECT_NAME here is the name of the Response we created). Python translates this JSON object to a dictionary.
 
