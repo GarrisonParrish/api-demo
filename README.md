@@ -8,7 +8,7 @@ Many APIs are available on the Internet for free use, and many companies and org
 
 [Simple ISS info API](http://api.open-notify.org/)
 
-This API has two endpoints: `iss_now` and `astros`. Think of endpoints as functions, each with their own parameters and return values. For example, to get the names of all astronauts currently in space, simply add `"/astros.json"` to the URL. Try opening that URL in your browser. It's a bit of a mess, but you should see some names in what looks like a bunch of Python dictionaries. This is actually a file format called JSON, and it's a common and versatile file type that we can easily translate to Python dictionaries! Check out open_notify_extensions.md for more information.
+This API has two endpoints: `iss_now` and `astros`. Think of endpoints as functions, each with their own parameters and return values. For example, to get the names of all astronauts currently in space, simply add `"/astros.json"` to the URL. Try opening that URL in your browser. It's a bit of a mess, but you should see some names in what looks like a bunch of Python dictionaries. This is actually a file format called JSON, and it's a common and versatile file type that we can easily translate to Python dictionaries! Check out `open_notify_extensions.md` for more information.
 
 Here is a [simple guide](https://www.w3schools.com/python/python_json.asp) to using the JSON format with Python.
 
@@ -41,4 +41,4 @@ Note: if date input does not match the YYYY-MM-DD (4-digit year, 2-digit month, 
 This can be tricky to work around in some cases. If you want a better way to format dates, take a look at the
 `datetime` library. [Here](https://www.geeksforgeeks.org/python-validate-string-date-format/) is a helpful guide on using that library.
 
-Check out demo2.py in this repo for a demonstration of how to use this API! Try commenting and uncommenting lines in the main function to see the differrent endpoints in action. Feel free to modify the code and/or add your own functions! I hope this guide was helpful!
+Check out `demo2.py` in this repo for a demonstration of how to use this API! Try commenting and uncommenting lines in the main function to see the differrent endpoints in action. Feel free to modify the code and/or add your own functions! I hope this guide was helpful!
