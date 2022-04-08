@@ -28,13 +28,27 @@ def get_date_range(start_date: str, end_date: str) -> list[dict[str, str]]:
     response_dict: dict[str, str] = response.json()   # get the response data in JSON format
     return response_dict
 
-# print(get_date_range("2005-06-05", "2005-06-08"))
-
 def get_field(dict_list: list[dict[str, str]], field_name: str) -> list[str]:
     result: list[str] = []
     for i in dict_list:
         result.append(i[field_name])
 
 def main() -> None:
-    res = get_date("2005-06-05")
-    print(res)
+    res: dict[str, str] = get_date("2001-11-12") # a single dictionary
+    # print(res)
+    # 1 month's worth of data. As you can see, working with APIs can mean working with huge amounts of data.
+    # Generally, the larger the data requested, the longer the API will take to respond. The speed of responses
+    # will vary significantly between different APIs and endpoints. Keep this in mind when designing your project.
+    res_2005_jun_to_jul: list[dict[str, str]] = get_date_range("2005-06-05", "2005-07-05")
+    
+    # print(len(res_2005_jun_to_jul)) # As you can see, there are 31 dictionaries in the list, one for each day.
+    # print(res_2005_jun_to_jul[0]["date"])  # first date, June 5 2005
+    # print(res_2005_jun_to_jul[4]["date"])  # fifth date, June 9 2005
+    # print(res_2005_jun_to_jul[4]["explanation"])
+
+    for apod in res_2005_jun_to_jul:
+        print(apod["url"])
+    
+
+if __name__ == "__main__":
+    main()

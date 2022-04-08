@@ -34,7 +34,7 @@ To specify multiple endpoints, just chain &ENDPOINT_NAME=ARG statements one afte
 
     https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2017-07-08&end_date=2017-07-10
 
-will return a list of 3 APOD data for 7/8/2017, 7/9/2017, and 7/10/2017.
+will return a list of 3 APOD data for 7/8/2017, 7/9/2017, and 7/10/2017. Note that the data is a list of dicts, not a single dict--this was a feature of the JSON object that was carried over when we converted it to Python form.
 
 Note: if date input does not match the YYYY-MM-DD (4-digit year, 2-digit month, 2-digit day) format, you will get a 'bad request' result that looks something like this:
 `{'code': 400, 'msg': "time data '2005-06-0' does not match format '%Y-%m-%d'", 'service_version': 'v1'}`
