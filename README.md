@@ -8,7 +8,7 @@ Many APIs are available on the Internet for free use, and many companies and org
 
 [Simple ISS info API](http://api.open-notify.org/)
 
-This API has two endpoints: `iss_now` and `astros`. Think of endpoints as functions, each with their own parameters and return values. For example, to get the names of all astronauts currently in space, simply add `"/astros.json"` to the URL. Try opening that URL in your browser. It's a bit of a mess, but you should see some names in what looks like a bunch of Python dictionaries. This is actually a file format called JSON, and it's a common and versatile file type that we can easily translate to Python dictionaries!
+This API has two endpoints: `iss_now` and `astros`. Think of endpoints as functions, each with their own parameters and return values. For example, to get the names of all astronauts currently in space, simply add `"/astros.json"` to the URL. Try opening that URL in your browser. It's a bit of a mess, but you should see some names in what looks like a bunch of Python dictionaries. This is actually a file format called JSON, and it's a common and versatile file type that we can easily translate to Python dictionaries! Check out open_notify_extensions.md for more information.
 
 Here is a [simple guide](https://www.w3schools.com/python/python_json.asp) to using the JSON format with Python.
 
