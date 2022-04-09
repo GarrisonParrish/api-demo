@@ -25,7 +25,7 @@ def get_date(date: str) -> dict[str, str]:
 def get_date_range(start_date: str, end_date: str) -> list[dict[str, str]]:
     """Get list of APOD data over a given range of dates. Date format YYYY-MM-DD."""
     response = requests.get(f"https://api.nasa.gov/planetary/apod?api_key={API_KEY}&start_date={start_date}&end_date={end_date}")
-    response_dict: dict[str, str] = response.json()   # get the response data in JSON format
+    response_dict: list[dict[str, str]] = response.json()   # get the response data in JSON format
     return response_dict
 
 def get_field(dict_list: list[dict[str, str]], field_name: str) -> list[str]:
